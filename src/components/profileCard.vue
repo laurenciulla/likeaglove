@@ -36,8 +36,8 @@ export default {
   justify-content: flex-end;
 }
 img{
-  /*width:100%;*/
-  /*height:100px;*/
+  width:100%;
+  height:100px;
 }
 h2{
   font-size:18px;

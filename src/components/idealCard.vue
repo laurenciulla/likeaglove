@@ -1,6 +1,6 @@
 <template>
   <div class="idealCard">
-    <!-- <img v-bind:src="image"> -->
+    <img :src="image">
     <h2>{{ item }}</h2>
   </div>
   
@@ -15,7 +15,7 @@ export default {
   data(){
     return {
       item: 'Top',
-      // image:'./../assets/likeaglovelogo.png'
+      image:'./assets/likeaglovelogo.png'
     }
   }
 }
@@ -37,8 +37,8 @@ export default {
   width:300px;
 }
 img{
-  /*width:100%;*/
-  /*height:100px;*/
+  width:100%;
+  height:100px;
 }
 h2{
   font-size:18px;
