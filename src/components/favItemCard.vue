@@ -2,10 +2,7 @@
   <div class="idealCard">
     <div>
       <img :src="image">
-      <h3 v-for="value, name in object" v-bind:class="name">
-        {{ value }}<span v-if="inches">"</span>
-        <span v-else> cm</span>
-      </h3>
+      <!-- <button v-on:click="">View Details</button> -->
     </div>
     
     <h2>{{ item }}</h2>
@@ -55,8 +52,6 @@ img{
   width:100%;
   padding:0px 20px;
   position: relative;
-  top:165px;
-
 }
 h2{
   font-size:18px;

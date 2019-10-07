@@ -7,8 +7,6 @@
         <span v-else> cm</span>
       </h3>
     </div>
-    
-    <h2>{{ item }}</h2>
   </div>
   
 </template>
@@ -22,13 +20,13 @@ export default {
   data(){
     return {
       item: 'Top',
-      image:'./assets/ideal-top.png',
+      image:'./assets/body-guide.png',
       object: {
-          shoulderWidth: 10,
-          shoulderLength: 2,
-          chest: 3,
-          bust: 32,
-          waist: 28
+          Height: 67,
+          Chest: 32,
+          Waist: 28,
+          Hip: 34,
+          LegLength: 28
       },
       inches:true
     }
@@ -42,20 +40,16 @@ export default {
   box-sizing: border-box;
 }
 .idealCard{
-  border:#CDE9FD 3px solid;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: flex-end;*/
   width:170px;
   max-height: 240px;
 
 }
 img{
   width:100%;
-  padding:0px 20px;
-  position: relative;
-  top:165px;
+  padding:0px 15px;
 
 }
 h2{
@@ -70,25 +64,25 @@ h3{
   font-size:13px;
   position: relative;
 }
-.shoulderWidth{
-  top:-38px;
-  left: 77px;
+.Height{
+  top:-300px;
+  left: 117px;
 }
-.shoulderLength{
-  top:-72px;
-  left:40px;
+.Chest{
+  top:-275px;
+  left:50px;
 }
-.chest{
-  top:-61px;
-  left:101px;
+.Waist{
+  top:-260px;
+  left:51px;
 }
-.bust{
-  top:-78px;
-  left:58px;
+.Hip{
+  top:-260px;
+  left:51px;
 }
-.waist{
-  top:-70px;
-  left:63px;
+.LegLength{
+  top:-230px;
+  left:5px;
 }
 ul {
   list-style-type: none;

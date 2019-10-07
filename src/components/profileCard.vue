@@ -1,6 +1,8 @@
 <template>
   <div class="profileCard">
-    <img v-bind:src="image">
+    <div class="imageHolder">
+      <img v-bind:src="image">
+    </div>
     <h2>{{ username }}</h2>
   </div>
   
@@ -15,7 +17,7 @@ export default {
   data(){
     return {
       username: 'Username',
-      image:'./assets/likeaglovelogo.png'
+      image:'./assets/profile-photo.jpg',
     }
   }
 }
@@ -27,17 +29,31 @@ export default {
   box-sizing: border-box;
 }
 .profileCard{
-  border:#CDE9FD 3px solid;
-  border-radius: 5px;
+  /*border:#CDE9FD 3px solid;
+  border-radius: 5px;*/
   width:90%;
   height:130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /*object-fit: cover;*/
+}
+.imageHolder{
+  border-top:#CDE9FD 3px solid;
+  border-left:#CDE9FD 3px solid;
+  border-right:#CDE9FD 3px solid;
+  border-radius: 5px 5px 0px 0px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 img{
   width:100%;
-  height:100px;
+  max-height:100px;
+  /*height:100px;*/
+  position: relative;
+  bottom: 0;
+  object-fit: cover;
 }
 h2{
   font-size:18px;
@@ -45,6 +61,10 @@ h2{
   background-color:#CDE9FD;
   padding:10px 15px 8px 15px;
   margin:0;
+  border-bottom:#CDE9FD 3px solid;
+  border-left:#CDE9FD 3px solid;
+  border-right:#CDE9FD 3px solid;
+  border-radius: 0px 0px 5px 5px;
 }
 h3 {
   margin: 40px 0 0;
