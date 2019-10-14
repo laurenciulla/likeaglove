@@ -9,7 +9,9 @@
 </template>
 
 <style>
-
+#nav{
+  display: none;
+}
 #measurements{
   margin-top:10%;
   display: flex;

@@ -1,4 +1,4 @@
-# hello-world
+# like a glove
 
 ## Project setup
 ```

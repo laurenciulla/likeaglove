@@ -2,7 +2,7 @@
   <div class="idealCard">
     <div class="picture">
       <!-- <img :src="image"> -->
-      <button v-on:click="">View Details</button>
+      <router-link to="/about"><button>View Details</button></router-link>
     </div>
     
     <h2>{{ item }}</h2>
@@ -20,6 +20,7 @@ export default {
     return {
       item: 'Scrunchy Top',
       image:'./assets/scrunchy-top.jpg',
+      type:'top',
       object: {
           shoulderWidth: 10,
           shoulderLength: 2,
@@ -44,8 +45,11 @@ button{
   border:none;
   border-radius: 5px;
   margin-bottom: 25px;
+  
+  padding:10px 20px;
+}
+router-link{
   width:90%;
-  padding:10px;
 }
 .idealCard{
   border:#CDE9FD 3px solid;
