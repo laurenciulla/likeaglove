@@ -1,8 +1,8 @@
 <template>
   <div class="idealCard">
-    <div>
-      <img :src="image">
-      <!-- <button v-on:click="">View Details</button> -->
+    <div class="picture">
+      <!-- <img :src="image"> -->
+      <button v-on:click="">View Details</button>
     </div>
     
     <h2>{{ item }}</h2>
@@ -18,8 +18,8 @@ export default {
   },
   data(){
     return {
-      item: 'Top',
-      image:'./assets/ideal-top.png',
+      item: 'Scrunchy Top',
+      image:'./assets/scrunchy-top.jpg',
       object: {
           shoulderWidth: 10,
           shoulderLength: 2,
@@ -38,6 +38,15 @@ export default {
 *{
   box-sizing: border-box;
 }
+button{
+  background-color: #ffffff;
+  font-size: 20px;
+  border:none;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  width:90%;
+  padding:10px;
+}
 .idealCard{
   border:#CDE9FD 3px solid;
   border-radius: 5px;
@@ -45,12 +54,27 @@ export default {
   flex-direction: column;
   justify-content: flex-end;
   width:170px;
-  max-height: 240px;
+  height:240px;
+  max-height: 200px;
+  
+
+}
+.picture{
+  background-image: url('/assets/scrunchy-top.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width:100%;
+  height:inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 
 }
 img{
   width:100%;
-  padding:0px 20px;
+  padding:0px;
   position: relative;
 }
 h2{

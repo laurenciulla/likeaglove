@@ -8,7 +8,7 @@
         <profileCard></profileCard>
         <h1>Measurements</h1>
         <ul>
-          <li v-for="value, name in object">
+          <li v-bind:key="value" v-for="value, name in object">
             {{ name }}: {{ value }} 
             <span v-if="inches"> in</span>
             <span v-else> cm</span>
@@ -74,7 +74,7 @@ export default {
           Chest: 32,
           Waist: 28,
           Hip: 34,
-          LegLength: 28
+          LegLength: 29
       },
       inches: true
     }
@@ -84,6 +84,7 @@ export default {
 </script>
 
 <style>
+
 #measurements{
   margin-top:10%;
   display: flex;
@@ -155,5 +156,9 @@ h3{
 }
 body{
   margin:0;
+  max-width: 100vw;
+}
+.app{
+  overflow-x: hidden;
 }
 </style>
