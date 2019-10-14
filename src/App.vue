@@ -1,87 +1,12 @@
 <template>
   <div id="app">
-    <nav>
-      <img class="logo" alt="Like a Glove logo" src="./assets/likeaglovelogo.png">
-    </nav>
-    <div id="measurements">
-      <div class="left">
-        <profileCard></profileCard>
-        <h1>Measurements</h1>
-        <ul>
-          <li v-bind:key="value" v-for="value, name in object">
-            {{ name }}: {{ value }} 
-            <span v-if="inches"> in</span>
-            <span v-else> cm</span>
-          </li>
-        </ul>
-      </div>
-      <div class="right">
-        <bodyGuide class="bodyGuide"></bodyGuide>
-        <!-- <img src="./assets/body-guide.png" class="bodyGuide"> -->
-        <!-- <img src="./assets/body-guide.png" class="bodyGuide"> -->
-        <!--  <h3 v-for="value, name in object" v-bind:class="name">
-            {{ value }} 
-            <span v-if="inches"> "</span>
-            <span v-else> cm</span>
-          </h3> -->
-      </div>
-      
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
-
-    <div id="idealPieces">
-      <h1 class="comp">Ideal Pieces</h1>
-      <div class="cardContainer">
-        <idealCard class="card"></idealCard>
-        <idealCard class="card"></idealCard>
-        <idealCard class="card"></idealCard>
-      </div>
-    </div>
-
-    <div id="favItems">
-      <h1>Your Favorite Items</h1>
-      <div class="cardContainer">
-        <favItemCard class="card"></favItemCard>
-      </div>
-    </div>
-    
-      
-  
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <router-view/>
   </div>
 </template>
-
-<script>
-// import HelloWorld from './components/HelloWorld.vue'
-import profileCard from './components/profileCard.vue'
-import idealCard from './components/idealCard.vue'
-import bodyGuide from './components/bodyGuide.vue'
-import favItemCard from './components/favItemCard.vue'
-
-export default {
-  name: 'app',
-  components: {
-    // HelloWorld
-    profileCard,
-    idealCard,
-    bodyGuide,
-    favItemCard
-  },
-  data(){
-    return{
-        object: {
-          Height: 67,
-          Chest: 32,
-          Waist: 28,
-          Hip: 34,
-          LegLength: 29
-      },
-      inches: true
-    }
-  }
-
-}
-</script>
 
 <style>
 
